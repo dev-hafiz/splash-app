@@ -16,13 +16,13 @@ export default function App() {
     "Cookie-Regular": require("./assets/fonts/Cookie-Regular.ttf"),
   });
 
-  if (!loadedFonts) {
-    return <View>Loading...</View>;
-  }
+  // if (!loadedFonts) {
+  //   return <Text>Loading...</Text>;
+  // }
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>

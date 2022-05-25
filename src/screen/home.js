@@ -1,15 +1,22 @@
-import { View, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import React from "react";
-import Text from "../components/text/text";
+import { colors } from "../theme/colors";
+import SplashHeader from "../components/text/splash-header";
+import { StatusBar } from "expo-status-bar";
 
 export default function Home() {
   return (
-    <View>
-      <Text preset="h1" style={styles.textHeader}> This is home screen</Text>
-    </View>
+    <SafeAreaView style={styles.root}>
+    <StatusBar/>
+      <SplashHeader />
+    </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    backgroundColor: colors.indigo,
+  },
   textHeader: {
     marginTop: 30,
   },
