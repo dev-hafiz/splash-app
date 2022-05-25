@@ -19,7 +19,8 @@ const BASE_BOLD = {
 
 export const presets = {
   default: BASE,
-  bold: BASE_BOLD,
+  logo: LOGO_FONT,
+
   h1: {
     ...BASE_BOLD,
     fontSize: 34,
