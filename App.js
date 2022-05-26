@@ -1,10 +1,8 @@
 import { useFonts } from "@expo-google-fonts/inter";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
 import Text from "./src/components/text/text";
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/screen/home";
+import { NavigationContainer } from "@react-navigation/native";
 
 const Stack = createNativeStackNavigator();
 

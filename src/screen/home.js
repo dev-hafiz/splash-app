@@ -1,22 +1,24 @@
-import { SafeAreaView, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import React from "react";
 import { colors } from "../theme/colors";
 import SplashHeader from "../components/text/splash-header";
 import { StatusBar } from "expo-status-bar";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import BottomSheet from "../components/bottom-sheet";
 
 export default function Home() {
   return (
-    <SafeAreaView style={styles.root}>
-    <StatusBar/>
-      <SplashHeader />
-    </SafeAreaView>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: colors.indigo }}>
+      <View style={styles.root}>
+        <StatusBar style="light" />
+        <SplashHeader />
+        <BottomSheet />
+      </View>
+    </GestureHandlerRootView>
   );
 }
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: colors.indigo,
-  },
+  root: {},
   textHeader: {
     marginTop: 30,
   },
