@@ -11,6 +11,7 @@ export default function SplashHeader() {
         preset="logo"
         style={{
           textAlign: "center",
+          marginTop:8
         }}
       >
         D

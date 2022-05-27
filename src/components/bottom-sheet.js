@@ -9,6 +9,7 @@ import Animated, {
   withSpring,
   withTiming,
 } from "react-native-reanimated";
+import BottomContents from "./bottom-contents";
 
 const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 
@@ -27,7 +28,7 @@ export default function BottomSheet() {
     });
 
   useEffect(() => {
-    translateY.value = withSpring(-SCREEN_HEIGHT /1.5, { damping: 50 });
+    translateY.value = withSpring(-SCREEN_HEIGHT / 1.5, { damping: 50 });
   }, []);
 
   const rBottomSheetStyle = useAnimatedStyle(() => {
@@ -40,6 +41,7 @@ export default function BottomSheet() {
     <GestureDetector gesture={gesture}>
       <Animated.View style={[styles.bottomSheetContainer, rBottomSheetStyle]}>
         <View style={styles.line} />
+        <BottomContents />
       </Animated.View>
     </GestureDetector>
   );

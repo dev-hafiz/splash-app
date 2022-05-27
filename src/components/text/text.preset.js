@@ -17,6 +17,12 @@ const BASE_BOLD = {
   color: colors.violet,
 };
 
+const btnTetx = {
+  fontFamily: typography.primaryBold,
+  color: colors.white,
+  fontSize: 16,
+};
+
 export const presets = {
   default: BASE,
   logo: LOGO_FONT,
@@ -33,7 +39,7 @@ export const presets = {
     ...BASE_BOLD,
     fontSize: 24,
   },
-  small: {
-    ...BASE,
+  h4: {
+    ...btnTetx
   },
 };
